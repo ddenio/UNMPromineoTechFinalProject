@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { CharacterList } from './components/CharacterList';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+// import Button from 'react-bootstrap/Button';
+// import ButtonGroup from 'react-bootstrap/ButtonGroup';
+// import Alert from 'react-bootstrap/Alert';
+// import Card from 'react-bootstrap/Card';
+// import Container from 'react-bootstrap/Container';
+// import { eldenApi } from '../src/components/EldenAPI';
+
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link,
+//   useRouteMatch
+// } from 'react-router-dom';
+// import { CharacterList } from './components/CharacterList';
+// import ItemList from './components/Items';
+
+
+class App extends Component  {
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CharacterList  />
   );
+}
 }
 
 export default App;
