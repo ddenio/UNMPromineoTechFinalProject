@@ -6,7 +6,7 @@ export class EldenApi {
             // console.log('Get Class', `${Elden_Endpoint}/classes?limit=5`);
             const resp = await fetch(`${Elden_Endpoint}/classes`);
             const data = await resp.json();
-            console.log('get class data: ' + data.data);
+            // console.log('get class data: ' + data.data);
             return data.data;
         } catch (e) {
             console.log('Fetch Classes had an issue', e);
@@ -16,10 +16,34 @@ export class EldenApi {
 
     getitems = async () => {
         try {
-            const data2 = await fetch(`${Elden_Endpoint}/items?limit=2`);
-            return data2;
+            const resp = await fetch(`${Elden_Endpoint}/items`);
+            const data = await resp.json();
+            console.log('get items data: ' , data)
+            return data.data;
         } catch (e) {
             console.log('Fetch Items had an issue', e);
+        }
+    }
+
+    getweapons = async () => {
+        try {
+            const resp = await fetch(`${Elden_Endpoint}/weapons`);
+            const data = await resp.json();
+            console.log('get weapons data: ' , data)
+            return data.data;
+        } catch (e) {
+            console.log('Fetch Weapons had an issue', e);
+        }
+    }
+
+    getshields = async () => {
+        try {
+            const resp = await fetch(`${Elden_Endpoint}/shields`);
+            const data = await resp.json();
+            console.log('get shields data: ' , data)
+            return data.data;
+        } catch (e) {
+            console.log('Fetch Shields had an issue', e);
         }
     }
 
@@ -41,16 +65,46 @@ export class EldenApi {
 
     putItem = async (item) => {
         try {
-            const resp2 = await fetch(`${Elden_Endpoint}/${item.data.id}`, {
+            const resp2 = await fetch(`${Elden_Endpoint}/${item.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: item
+                body: JSON.stringify(item)
             });
-            return resp2;
+            return resp2.json();
         } catch(e) {
             console.log('Updating Classes had an issue', e);
+        }
+    }
+
+    putWeapon = async (weapon) => {
+        try {
+            const resp2 = await fetch(`${Elden_Endpoint}/${weapon.id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(weapon)
+            });
+            return resp2.json();
+        } catch(e) {
+            console.log('Updating Weapons had an issue', e);
+        }
+    }
+
+    putShield = async (shield) => {
+        try {
+            const resp2 = await fetch(`${Elden_Endpoint}/${shield.id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(shield)
+            });
+            return resp2.json();
+        } catch(e) {
+            console.log('Updating Shields had an issue', e);
         }
     }
         

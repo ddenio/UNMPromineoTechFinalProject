@@ -1,6 +1,7 @@
 import React from 'react';
 import { Character } from './Character';
 import { EldenApi } from './EldenAPI';
+import { ItemList } from './ItemList';
 
 export class CharacterList extends React.Component {
     state = {
@@ -64,9 +65,15 @@ export class CharacterList extends React.Component {
                         character={character}
                         key={character.id}
                         updateCharacter={this.updateCharacter}
+                        
                     />
+                    
+                    
                 ))}
+                
             </div>
+            
+            
         )
     }
 

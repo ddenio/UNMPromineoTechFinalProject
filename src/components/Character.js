@@ -1,6 +1,7 @@
 import React from 'react';
-
-// import { NewLevelForm } from './NewLevelForm';
+import { WeaponList } from './WeaponList';
+import { ShieldList } from './ShieldList';
+import { ItemList } from './ItemList';
 
 export const Character = (props) => {
     const { character } = props;
@@ -17,7 +18,10 @@ export const Character = (props) => {
                     <li key={k}>{k} : {v}</li>
                 )
                 )}
-            </ul>
+            </ul><br></br>
+            <WeaponList /><br></br>
+            <ShieldList /><br></br>
+            <ItemList /><br></br>
         </div>
     )
 

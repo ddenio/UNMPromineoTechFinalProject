@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { CharacterList } from './components/CharacterList';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { ItemList } from './components/ItemList';
+import { WeaponList } from './components/WeaponList';
+import { ShieldList } from './components/ShieldList';
 
 // import Button from 'react-bootstrap/Button';
 // import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -23,7 +26,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class App extends Component  {
   render() {
   return (
-    <CharacterList  />
+    <>
+     <CharacterList />
+    </>
   );
 }
 }
