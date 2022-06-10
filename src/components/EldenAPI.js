@@ -1,11 +1,13 @@
 const Elden_Endpoint = 'https://eldenring.fanapis.com/api';
 
-class EldenApi {
+export class EldenApi {
     getclass = async () => {
         try {
-            const data = await fetch(`${Elden_Endpoint}/classes?limit=5`);
-            
-            return data;
+            // console.log('Get Class', `${Elden_Endpoint}/classes?limit=5`);
+            const resp = await fetch(`${Elden_Endpoint}/classes`);
+            const data = await resp.json();
+            console.log('get class data: ' + data.data);
+            return data.data;
         } catch (e) {
             console.log('Fetch Classes had an issue', e);
         }
@@ -23,14 +25,15 @@ class EldenApi {
 
     putHeroClass = async (character) => {
         try {
-            const resp = await fetch(`${Elden_Endpoint}/${character.data.id}`, {
+            console.log('Put Class', `${Elden_Endpoint}/items?limit=2`);
+            const resp = await fetch(`${Elden_Endpoint}/${character.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: character
+                body: JSON.stringify(character)
             });
-            return resp;
+            return await resp.json();
         } catch(e) {
             console.log('Updating Classes had an issue', e);
         }
@@ -55,5 +58,4 @@ class EldenApi {
 }
 
 
-
-export const eldenApi = new EldenApi();
+// export const eldenApi = new EldenApi();
