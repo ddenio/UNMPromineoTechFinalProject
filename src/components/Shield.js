@@ -7,9 +7,11 @@ export const Shield = (props) => {
 
     return (
         <div>
+            <img src={shield.image} alt="shield"></img><br></br>
             <h1>{shield.name}</h1><br></br>
-            <h2>{shield.description}</h2>
+            <h4><i>{shield.description}</i></h4>
             <ul>
+                <h3>Stats: </h3>
                 <li>
                     <h4>Physical Defense: {shield.defence[0].amount}</h4>
                 </li>
@@ -27,13 +29,6 @@ export const Shield = (props) => {
                 </li>
                 
             </ul>
-            
-            
-            
-
-            <img src={shield.image} alt="shield"></img>
-
-            
         </div>
     )
 

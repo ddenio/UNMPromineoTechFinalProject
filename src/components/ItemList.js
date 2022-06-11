@@ -51,7 +51,7 @@ export class ItemList extends React.Component {
 
 
     render() {
-        console.log('render method, state is: ' , this.state);
+        // console.log('render method, state is: ' , this.state);
         
         return (
             

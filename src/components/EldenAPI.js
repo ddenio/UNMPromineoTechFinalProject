@@ -47,6 +47,20 @@ export class EldenApi {
         }
     }
 
+    deleteCharacter = async (character) => {
+        try {
+            const resp = await fetch(`${Elden_Endpoint}/${character.id}` , {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            return await resp.json();
+        } catch(e) {
+            console.log('delete character had an issue.', e);
+        }
+    }
+
     putHeroClass = async (character) => {
         try {
             console.log('Put Class', `${Elden_Endpoint}/items?limit=2`);
@@ -107,7 +121,21 @@ export class EldenApi {
             console.log('Updating Shields had an issue', e);
         }
     }
-        
+
+    postCharacter = async (character) => {
+        try {
+            const resp = await fetch(`${Elden_Endpoint}/classes`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(character)
+            });
+            return await resp.json();
+        } catch(e) {
+            console.log('Oops, looks like updating houses had an issue.', e);
+        }
+    }
 
 }
 
