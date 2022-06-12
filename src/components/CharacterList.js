@@ -83,6 +83,22 @@ export class CharacterList extends React.Component {
 
     };
 
+    updateCharacterName = async({id , name}) => {
+        
+        this.setState((oldState, _ ) => {
+            const oldCharacters = oldState.characters;
+            const updated = [...oldCharacters];
+            const index = updated.findIndex((character) => character.id === id);
+            if (index !== -1) {
+                updated[index] = {...updated[index], id, name};
+            }
+
+            return {
+                characters: updated
+            };
+        });
+        };
+
     updateCharacter = async (updatedCharacter) => {
         let api2 = new EldenApi();
         await api2.putHeroClass(updatedCharacter);
@@ -95,7 +111,7 @@ export class CharacterList extends React.Component {
             name
         });
         this.fetchCharacters();
-    }
+    };
 
     removeCharacter = async (character) => {
         let api = new EldenApi();
@@ -121,6 +137,8 @@ export class CharacterList extends React.Component {
                         key={character.id}
                         updateCharacter={this.updateCharacter}
                         deleteCharacter={this.deleteCharacter}
+                        updateCharacterName={this.updateCharacter}
+
 
                     />
 

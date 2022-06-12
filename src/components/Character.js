@@ -7,7 +7,7 @@ import { ItemList } from './ItemList';
 
 
 export const Character = (props) => {
-    const { character, deleteCharacter } = props;
+    const { character, deleteCharacter, updateCharacterName } = props;
 
     
     
@@ -19,9 +19,19 @@ export const Character = (props) => {
             
             <div className='card-body'>
                 <h1>{character.name}</h1><br></br>
-                <h3><i>{character.description}</i></h3><br></br>
+                
+                <form className='border border-light rounded p-1'>
+                <h4>Add a new name</h4>
+                <input
+                    type='text'
+                    placeholder='Character name'
+                    
+                    />
+                <button className='btn btn-dark m-2' type='submit' onClick={(e) => updateCharacterName(character.id)}>Change Character Name</button>
+                </form><br></br>
+                <h5><i>" {character.description} "</i></h5><br></br>
 
-                <img src={character.image} alt="character"></img><br></br>
+                <img src={character.image} alt="character"></img><br></br><br></br>
 
                 <ul>
                     <h3>Stats: </h3>
@@ -31,11 +41,14 @@ export const Character = (props) => {
                     )}
                 </ul><br></br>
 
-                <button className='btn btn-danger m-2' type='submit' onClick={(e) => deleteCharacter(character.id)}>Re-Roll Character</button><br></br>
+                <button className='btn btn-danger m-2' type='submit' onClick={(e) => deleteCharacter(character.id)}>Roll New Class</button><br></br><br></br>
                 <WeaponList /><br></br>
                 <ShieldList /><br></br>
+                <div className='border border-light rounded-lg p-2'>
                 <ItemList /><br></br>
+                </div>
 
+                 {/* Accordion code */}       
                 {/* <div className='accordion' id='itemsAccordion'>
                     <div className='card bg-secondary border-light m-1'>
                         <div className='card-header' id='headingOne'>

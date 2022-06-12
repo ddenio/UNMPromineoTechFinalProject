@@ -7,9 +7,9 @@ export const Item = (props) => {
 
     return (
         <div>
-            <img src={item.image} alt="item"></img><br></br>
-            <h1>{item.name}</h1><br></br>
-            <h4><i>{item.description}</i></h4>
+            <img src={item.image} alt="item"></img><br></br><br></br>
+            <h3>{item.name}</h3>
+            <h6><i>{item.description}</i></h6><br></br>
         </div>
     )
 

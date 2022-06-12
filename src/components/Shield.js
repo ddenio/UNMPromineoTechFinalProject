@@ -6,26 +6,26 @@ export const Shield = (props) => {
     const { shield } = props;
 
     return (
-        <div>
-            <img src={shield.image} alt="shield"></img><br></br>
-            <h1>{shield.name}</h1><br></br>
-            <h4><i>{shield.description}</i></h4>
+        <div className='border border-light rounded-lg p-1 text-center'>
+            <img src={shield.image} alt="shield"></img><br></br><br></br>
+            <h1>{shield.name}</h1>
+            <h6><i>"{shield.description}"</i></h6><br></br>
             <ul>
                 <h3>Stats: </h3>
                 <li>
-                    <h4>Physical Defense: {shield.defence[0].amount}</h4>
+                    <h6>Physical Defense: {shield.defence[0].amount}</h6>
                 </li>
                 <li>
-                    <h4>Magic Defense: {shield.defence[1].amount}</h4>
+                    <h6>Magic Defense: {shield.defence[1].amount}</h6>
                 </li>
                 <li>
-                    <h4>Fire Defense: {shield.defence[2].amount}</h4>
+                    <h6>Fire Defense: {shield.defence[2].amount}</h6>
                 </li>
                 <li>
-                    <h4>Light Defense: {shield.defence[3].amount}</h4>
+                    <h6>Light Defense: {shield.defence[3].amount}</h6>
                 </li>
                 <li>
-                    <h4>Holy Defense: {shield.defence[4].amount}</h4>
+                    <h6>Holy Defense: {shield.defence[4].amount}</h6>
                 </li>
                 
             </ul>
