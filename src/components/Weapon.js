@@ -6,7 +6,7 @@ export const Weapon = (props) => {
     const { weapon } = props;
 
     return (
-        <div className='border border-light rounded-lg p-2 text-center'>
+        <div className='p-2 text-center'>
             <br></br><br></br>
             <img src={weapon.image} alt="weapon"></img><br></br><br></br>
             <h1>{weapon.name}</h1><br></br>
