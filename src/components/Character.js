@@ -18,7 +18,7 @@ export const Character = (props) => {
             
             
             <div className='card-body'>
-                <h1 className='bg-warning p-2'>{character.name}</h1><br></br>
+                <h1 className='bg-warning p-2 border border-light rounded'>{character.name}</h1><br></br>
                 
                 <form>
                 <h4>Add a new name</h4>
@@ -50,11 +50,11 @@ export const Character = (props) => {
 
                  {/* Accordion code */}       
                 <div className='accordion' id='itemsAccordion'>
-                    <div className='card bg-secondary border-light rounded m-1'>
+                    <div className='card bg-dark border-light rounded m-1 text-light'>
                         <div className='card-header bg-warning' id='headingOne'>
                             <h2 className='mb-0'>
                                 <button className='btn btn-link text-decoration-none text-dark font-weight-bold' type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>
-                                <h3 className='font-weight-bold'>Weapon</h3>
+                                <h2 className='font-weight-bold'>Weapon</h2>
                                 </button>
                             </h2>
                         </div>
@@ -66,11 +66,11 @@ export const Character = (props) => {
 
                         </div>
                     </div><br></br>
-                    <div class="card bg-secondary border-light rounded m-1">
+                    <div class="card bg-dark border-light rounded m-1 text-light">
                         <div class="card-header bg-warning" id="headingTwo">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed text-decoration-none text-dark font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <h3>Shield</h3>
+                                    <h2>Shield</h2>
                                 </button>
                             </h2>
                         </div>
@@ -81,11 +81,11 @@ export const Character = (props) => {
                         </div>
                     </div>
 
-                    <div class="card bg-secondary border-light rounded m-1">
+                    <div class="card bg-dark border-light rounded m-1">
                         <div class="card-header bg-warning" id="headingThree">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed text-decoration-none text-dark font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <h3>Items</h3>
+                                    <h2>Items</h2>
                                 </button>
                             </h2>
                         </div>

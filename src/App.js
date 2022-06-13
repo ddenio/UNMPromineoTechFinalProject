@@ -19,15 +19,15 @@ class App extends Component {
         
         <div>
           <div>
-            <div className='btn btn-dark border border-light m-2'>
+            <div className='btn btn-dark border border-secondary m-2' id='navi1'>
               {/* Links route between different views, will change the URL, routes will read the changed URL and change the view based upon said URL */}
-              <Link to='/' className='text-decoration-none text-warning'>Home</Link>
+              <Link to='/' className='text-decoration-none text-warning font-weight-light'>Home</Link>
             </div>
-            <div className='btn btn-dark border border-light m-2'>
-              <Link to='/characters' className='text-decoration-none text-warning'>Characters</Link>
+            <div className='btn btn-dark border border-secondary m-2' id='navi2'>
+              <Link to='/characters' className='text-decoration-none text-warning font-weight-light'>Characters</Link>
             </div>
-            <div className='btn btn-dark border border-light m-2'>
-              <Link to='/about' className='text-decoration-none text-warning'>About</Link>
+            <div className='btn btn-dark border border-secondary m-2' id='navi3'>
+              <Link to='/about' className='text-decoration-none text-warning font-weight-light'>About</Link>
             </div>
           </div><br></br><br></br>
 
@@ -37,7 +37,7 @@ class App extends Component {
             <Route path='/characters'>
               {/* passing the data we created up top into our props for our Posts component */}
               <div className='container m-0'>
-                  <h1 className='text-center text-danger m-4'>Your Team of 3</h1><br></br>
+                  <h1 className='text-center text-warning m-4 p-2 bg-black rounded border border-secondary font-weight-light' id='head1'>Your Team of 3</h1><br></br>
                 <div className='card-columns'>
 
                   <CharacterList />
@@ -46,10 +46,16 @@ class App extends Component {
               </div>
             </Route>
             <Route path='/about'>
+              <div className='container m-0'>
+                  <h1 className='text-center text-warning m-4 p-2 bg-black rounded border border-secondary font-weight-light' id='head2'>About Elden Ring</h1><br></br>
                 <About />
+              </div>
             </Route>
             <Route path='/'>
-              <Home />
+            <div className='container m-0'>
+                  <h1 className='text-center text-warning m-4 p-2 bg-black rounded border border-secondary font-weight-light' id='head3'>Home</h1><br></br>
+                <Home />
+              </div>
             </Route>
           </Switch>
         </div>

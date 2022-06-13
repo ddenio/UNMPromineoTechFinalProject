@@ -12,6 +12,22 @@ h1, h2, h3, h4, div, p, button {
   font-weight: bolder !important;
 }
 
+#head1, #head2, #head3 {
+  background-color: black;
+}
+
+#about1, #about2 {
+  background-color: black;
+}
+
+#home1, #home2 {
+  background-color: black;
+}
+
+#navi1, #navi2, #navi3 {
+  background-color: black;
+}
+
 .card {
   display:flex;
   display: inline-block
