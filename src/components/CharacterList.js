@@ -84,25 +84,21 @@ export class CharacterList extends React.Component {
     };
 
     updateCharacterName = async({id , name}) => {
-        
-        this.setState((oldState, _ ) => {
-            const oldCharacters = oldState.characters;
-            const updated = [...oldCharacters];
-            const index = updated.findIndex((character) => character.id === id);
-            if (index !== -1) {
-                updated[index] = {...updated[index], id, name};
-            }
+      this.setState((oldState, _ ) => {
+          const oldCharacters = oldState.characters;
+          const updated = [...oldCharacters];
+          const index = updated.findIndex((character) => character.id === id);
 
-            return {
-                characters: updated
-            };
-        });
-        };
+          if (index !== -1) {
+            const oldCharacter =  updated[index];
+            const updatedCharacter = {...oldCharacter, name};
+            updated[index] = updatedCharacter;
+          }
 
-    updateCharacter = async (updatedCharacter) => {
-        let api2 = new EldenApi();
-        await api2.putHeroClass(updatedCharacter);
-        this.fetchCharacters();
+          return {
+              characters: updated
+          };
+      });
     };
 
     addCharacter = async ({ name }) => {
@@ -129,17 +125,12 @@ export class CharacterList extends React.Component {
 
             <div>
 
-                {/* mapping each character from our character list */}
-                {/* {this.state.characters && this.state.characters.map((character) */}
                 {this.state.characters && this.state.characters.map((character) => (
                     <Character
                         character={character}
                         key={character.id}
-                        updateCharacter={this.updateCharacter}
                         deleteCharacter={this.deleteCharacter}
-                        updateCharacterName={this.updateCharacter}
-
-
+                        updateCharacterName={this.updateCharacterName}
                     />
 
 

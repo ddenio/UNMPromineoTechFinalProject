@@ -6,7 +6,7 @@ function About() {
         <div className="container">
             
             <div className='card  border border-light' id='about1'>
-                <img src='https://wallpaperaccess.com/full/2651908.png' className='card-img-top' alt='eldenrings'></img><br></br>
+                <img src='/images/elden3.png' className='card-img-top' alt='eldenrings'></img><br></br>
                 <div className='card-body' id='about2'>
                     <h1 className='card-title text-center text-dark bg-warning rounded border border-light p-2 m-2 font-weight-light'>Welcome to the world of the Lands Between!</h1><bg></bg><bg></bg>
                     

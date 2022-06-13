@@ -47,7 +47,7 @@ h1, h2, h3, h4, div, p, button {
 
 
 body {
-  background: url('./images/elden4.jpg') no-repeat center center fixed;
+  background: url('/images/elden4.jpg') no-repeat center center fixed;
   margin: 0;
   
   -webkit-font-smoothing: antialiased;

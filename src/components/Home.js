@@ -6,7 +6,7 @@ function Home() {
         <div className="container">
             
             <div className='card border border-light' id='home1'>
-                <img src='https://wallpaper.dog/large/20541648.jpg' className='card-img-top' alt='eldenrings'></img><br></br>
+                <img src='/images/elden_background.jpg' className='card-img-top' alt='eldenrings'></img><br></br>
                 <div className='card-body ' id='home2'>
                     <h1 className='card-title text-center text-dark bg-warning rounded border border-light p-2 font-weight-light'>Welcome to the Elden Ring team creator app</h1><br></br><br></br>
                     <h2 className='card-title text-center text-danger font-weight-light'>How to Use: </h2><br></br>
