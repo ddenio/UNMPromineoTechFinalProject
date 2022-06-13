@@ -6,7 +6,7 @@ export const Shield = (props) => {
     const { shield } = props;
 
     return (
-        <div className='p-2 text-center border border-light rounded'>
+        <div className='p-2 text-center'>
             <img src={shield.image} alt="shield"></img><br></br><br></br>
             <h1>{shield.name}</h1>
             <h6><i>"{shield.description}"</i></h6><br></br>
