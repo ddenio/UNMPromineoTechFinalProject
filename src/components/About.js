@@ -8,7 +8,7 @@ function About() {
             <div className='card  border border-light' id='about1'>
                 <img src='https://wallpaperaccess.com/full/2651908.png' className='card-img-top' alt='eldenrings'></img><br></br>
                 <div className='card-body' id='about2'>
-                    <h1 className='card-title text-center text-dark bg-warning rounded border border-light p-2 m-2'>Welcome to the world of the Lands Between!</h1><bg></bg><bg></bg>
+                    <h1 className='card-title text-center text-dark bg-warning rounded border border-light p-2 m-2 font-weight-light'>Welcome to the world of the Lands Between!</h1><bg></bg><bg></bg>
                     
                     <h2 className='card-title text-center text-danger m-2'>  </h2><br></br><br></br>
                     <h4 className='text-warning p-2 font-weight-light m-2'>Elden Ring is a third-person action RPG with a dark fantasy setting where the story revolves around the Elden Ring. Legend has it that the ring holds unimaginable power "that which commanded the stars, giving life its fullest brilliance" and that the ring has been destroyed by something or someone. This then leads to the destruction and decay of the world, the sky burning, and brings parallels to the collapsing sun of the Souls universe.</h4><br></br>

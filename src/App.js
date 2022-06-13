@@ -18,15 +18,15 @@ class App extends Component {
       <Router>
         
         <div>
-          <div>
-            <div className='btn btn-dark border border-secondary m-2' id='navi1'>
+          <div className='border border-secondary rounded m-2 p-1' id='navback'>
+            <div className='btn btn-dark m-2 border border-secondary' id='navi1'>
               {/* Links route between different views, will change the URL, routes will read the changed URL and change the view based upon said URL */}
               <Link to='/' className='text-decoration-none text-warning font-weight-light'>Home</Link>
             </div>
-            <div className='btn btn-dark border border-secondary m-2' id='navi2'>
+            <div className='btn btn-dark m-2 border border-secondary' id='navi2'>
               <Link to='/characters' className='text-decoration-none text-warning font-weight-light'>Characters</Link>
             </div>
-            <div className='btn btn-dark border border-secondary m-2' id='navi3'>
+            <div className='btn btn-dark m-2 border border-secondary'  id='navi3'>
               <Link to='/about' className='text-decoration-none text-warning font-weight-light'>About</Link>
             </div>
           </div><br></br><br></br>
@@ -43,6 +43,7 @@ class App extends Component {
                   <CharacterList />
 
                 </div>
+                <h6 className='text-light text-left'>&copy; Derin DeNio 2022</h6>
               </div>
             </Route>
             <Route path='/about'>
