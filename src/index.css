@@ -6,7 +6,7 @@
 }
 
 #navback {
-  background-color: black;
+  background-color: rgba(2, 29, 7, 0.9);
   display:flex;
   justify-content: space-around;
   
@@ -27,7 +27,7 @@ h1, h2, h3, h4, div, p, button {
 }
 
 #head1, #head2, #head3 {
-  background-color: black;
+  background-color: rgba(2, 29, 7, 0.9);
 }
 
 #about1, #about2 {
@@ -39,8 +39,8 @@ h1, h2, h3, h4, div, p, button {
 }
 
 #navi1, #navi2, #navi3 {
-  background-color: rgba(5, 66, 15, 0.548);
-  border:0.5px solid rgba(124, 131, 121, 0.473) !important
+  background-color: rgba(0, 0, 0, 0.548);
+  /* border:0.5px solid rgba(124, 131, 121, 0.473) !important */
 }
 
 .card {
