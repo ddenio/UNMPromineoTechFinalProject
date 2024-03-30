@@ -67,7 +67,7 @@ ul {
 }
 
 #home1, #about1 {
-  border:1px solid rgb(111, 116, 110) !important
+  border:2px solid rgb(111, 116, 110) !important
 }
 /* .card-columns {
   column-count: 5;

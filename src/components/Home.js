@@ -20,7 +20,7 @@ function Home() {
                     
                 </div>
             </div><br></br><br></br>
-            <h6 className='text-light text-left'>&copy; Derin DeNio 2022</h6>
+            <h6 className='text-light text-left'>&copy; Derin DeNio 2023</h6>
         </div>
     )
 
